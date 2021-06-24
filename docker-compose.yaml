@@ -1,0 +1,11 @@
+version: "3.9"
+services:
+  dbus-daemon:
+    build: dbus-daemon
+
+  dbus-send:
+    build: dbus-send
+    command: /bin/sh -c 'while [ true ]; do sleep 300; done'
+
+  dbus-service:
+    build: dbus-service
